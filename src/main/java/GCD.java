@@ -1,3 +1,6 @@
+import java.time.Duration;
+import java.time.Instant;
+
 public class GCD {
 
     public static int gcd(int p, int q){
@@ -25,5 +28,25 @@ public class GCD {
         }
 
         return outcome;
+    }
+
+    public static long gcdTime(int p, int q){
+        Instant start = Instant.now();
+        gcd(p, q);
+// CODE to be timed goes HERE
+        Instant finish = Instant.now();
+        long timeElapsed = Duration.between(start, finish).toNanos();
+
+        return timeElapsed;
+    }
+
+    public static long gcdLoopTime(int p, int q){
+        Instant start = Instant.now();
+        gcdLoop(p, q);
+// CODE to be timed goes HERE
+        Instant finish = Instant.now();
+        long timeElapsed = Duration.between(start, finish).toMillis();
+
+        return timeElapsed;
     }
 }
