@@ -45,7 +45,7 @@ public class GCD {
         gcdLoop(p, q);
 // CODE to be timed goes HERE
         Instant finish = Instant.now();
-        long timeElapsed = Duration.between(start, finish).toMillis();
+        long timeElapsed = Duration.between(start, finish).toNanos();
 
         return timeElapsed;
     }

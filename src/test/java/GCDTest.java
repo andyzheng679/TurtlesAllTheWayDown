@@ -18,4 +18,13 @@ public class GCDTest {
 
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void GCDTimingTest(){
+        long gcdTime = GCD.gcdTime(1440, 408);
+        long gcdLoopTime = GCD.gcdLoopTime(1440, 408);
+
+        Assert.assertTrue(gcdLoopTime < gcdTime);
+
+    }
 }
